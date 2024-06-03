@@ -1,0 +1,50 @@
+<DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>dasdasdas</title>
+        <link rel="stylesheet" href="modificar.css">
+    </head>
+
+    <body>
+        <header>
+            <a href="../crear/crear.html">Crear</a>
+            <a href="../eliminar/eliminar.html">Eliminar</a>
+            <a href="../obtener/obtener.html">Obtener</a>
+            <a href="../modificar/modificar.html" style="text-decoration: underline;">Modificar</a>
+            <a href="../orden/ordenfecha.html">Libro Fecha</a>
+            <a href="../orden/ordenprecio.html">Libro Precio</a>
+        </header>
+        <main>
+            <section>
+                <form id="formu">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre">
+                    <label for="fecha">Fecha:</label>
+                    <input type="date" id="fecha" name="fecha">
+                    <label for="precio">Precio:</label>
+                    <input type="text" id="precio" name="precio">
+                    <button class="boton" type="submit">Modificar</button>
+                    <!--<input class="boton" type="submit" value="Modificar"> -->
+                </form>
+            </section>
+            <div class="tabla-container">
+                <table>
+                    <thead class="header-tabla">
+                        <tr>
+                            <th>id</th>
+                            <th>Nombre</th>
+                            <th>Fecha</th>
+                            <th>Precio</th>
+                        </tr>
+                    </thead>
+                    <tbody id="TablaLibro">
+                    </tbody>
+                </table>
+            </div>
+        </main>
+        <script src="modificar.js"></script>
+    </body>
+    </html>
