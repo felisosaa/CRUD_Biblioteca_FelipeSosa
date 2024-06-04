@@ -1,4 +1,6 @@
-obtenerLibro()
+window.onload=()=>{
+    obtenerLibro();
+  }
 
 
 let listadelibros=[]
@@ -7,6 +9,7 @@ async function obtenerLibro(){
     let consulta = await fetch(url);
     let datos = await consulta.json();
     listadelibros=datos;
+    console.log(datos);
     mostrarLibro(datos) 
 }
 function mostrarLibro(libro){
@@ -19,7 +22,7 @@ function mostrarLibro(libro){
         <td>${libro[i].nombre}</td>
         <td>${libro[i].fecha}</td>
         <td>${libro[i].precio}</td>
-        <td><button onclick="eliminarlibro('${libro[i].id}')">Eliminar</button></td>
+        <td><button onclick="eliminarlibro('${libro[i].id}')">eliminar</button></td>
         </tr>
         `;
     }
@@ -27,8 +30,8 @@ function mostrarLibro(libro){
 async function eliminarlibro(id){
     let formdata = new FormData();
     formdata.append("id",id);
-    let  url='http://localhost/CRUD_Biblioteca_FelipeSosa/backend/controlador/controlador.php?funcion=eliminar';
-
+    let  url='http://localhost/CRUD_Biblioteca_FelipeSosa/backend/controlador/controlador.php?funcion=eliminar';      
+        
         let config = {
             method: 'POST', 
             body: formdata
@@ -38,10 +41,10 @@ async function eliminarlibro(id){
         let datos = await respuesta.json();
 
         if(datos){
-            alert("Se elimino el libro")
-            obtenerlibro()
+            alert("se elimino el libro")
+            obtenerLibro()
         }
         else{
-            alert("No se elimino el libro")
+            alert("no se elimino el libro")
         }
 }

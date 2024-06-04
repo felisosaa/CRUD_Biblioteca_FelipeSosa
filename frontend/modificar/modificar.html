@@ -1,25 +1,28 @@
 <DOCTYPE html>
     <html lang="en">
-
+    
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>dasdasdas</title>
         <link rel="stylesheet" href="modificar.css">
+        <script src="modificar.js"></script>
     </head>
-
+    
     <body>
         <header>
             <a href="../crear/crear.html">Crear</a>
             <a href="../eliminar/eliminar.html">Eliminar</a>
             <a href="../obtener/obtener.html">Obtener</a>
             <a href="../modificar/modificar.html" style="text-decoration: underline;">Modificar</a>
-            <a href="../orden/ordenfecha.html">Libro Fecha</a>
-            <a href="../orden/ordenprecio.html">Libro Precio</a>
+            <a href="../orden/Xfecha.html">Libro Fecha</a>
+            <a href="../orden/Xprecio.html">Libro Precio</a>
         </header>
         <main>
             <section>
                 <form id="formu">
+                    <label for="id">ID:</label>
+                    <input type="text" id="id" name="id" readonly>
                     <label for="nombre">Nombre:</label>
                     <input type="text" id="nombre" name="nombre">
                     <label for="fecha">Fecha:</label>
@@ -45,6 +48,5 @@
                 </table>
             </div>
         </main>
-        <script src="modificar.js"></script>
     </body>
     </html>

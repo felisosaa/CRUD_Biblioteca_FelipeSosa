@@ -17,6 +17,12 @@ switch ($funcion) {
     case "obtener":
         obtenerLibro();
     break;
+    case "xfecha":
+        xfecha();
+    break;
+    case "xprecio":
+        xprecio();
+    break;
 }
 
 function crearLibro(){
@@ -28,10 +34,11 @@ function crearLibro(){
  }
 
  function modificarLibro(){
+    $id = $_POST['id'];
     $nombre = $_POST['nombre'];
     $fecha = $_POST['fecha'];
     $precio = $_POST['precio'];
-    $resultado = (new libro())->modificarLibro($nombre, $fecha, $precio);
+    $resultado = (new libro())->modificarLibro($id, $nombre, $fecha, $precio);
     echo json_encode($resultado);
 }
 function eliminarLibro(){
@@ -41,7 +48,15 @@ function eliminarLibro(){
 
 }
 function obtenerLibro(){
-    $resultado = (new libro())->obtenerLibro();
+    $resultado = (new libro())->obtenerLibro();   
+    echo json_encode($resultado);
+}
+function xfecha(){
+    $resultado = (new libro())->xfecha();   
+    echo json_encode($resultado);
+}
+function xprecio(){
+    $resultado = (new libro())->xprecio();   
     echo json_encode($resultado);
 }
 ?>

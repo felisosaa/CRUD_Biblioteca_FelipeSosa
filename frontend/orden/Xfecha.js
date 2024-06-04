@@ -3,7 +3,7 @@ obtenerLibro()
 
 let listadelibros=[]
 async function obtenerLibro(){
-    let url ="../../backend/controlador/controlador.php?funcion=obtener";
+    let url ="../../backend/controlador/controlador.php?funcion=xfecha";
     let consulta = await fetch(url);
     let datos = await consulta.json();
     listadelibros=datos;
